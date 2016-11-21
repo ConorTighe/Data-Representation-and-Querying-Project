@@ -6,5 +6,5 @@ This repository contains a single web application called Meal Manager that I wil
 The aim of my project is to creat a hub where a user can find a recipe, view the ingrediants and save the recipe locally.
 
 The API I will be using is Food2Fork:
-![alt text](Meal Manager\img "food")
+![alt text](Meal Manager\img\food2f "food")
 

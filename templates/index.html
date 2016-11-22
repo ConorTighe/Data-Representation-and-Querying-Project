@@ -27,6 +27,7 @@
         h1 {
             font-family: 'Baloo Bhaina', cursive;
         }
+          
       </style>
     </head>
     
@@ -49,7 +50,21 @@
       <div style="background: rgba(60, 255, 60, 0.2);" class="jumbotron">
         <h1>Meal Manager</h1>
         <p class="lead">A simple recipe app that provides ingerdiants fast.</p>
-      </div>
+          <div class="input-group">
+            <input type="text" class="form-control" aria-label="...">
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-default" title="Search Database">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-default btn" title="Sort by reviews" >
+                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-default btn" title="Sort by trending" >
+                        <span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span>
+                    </button>
+                </div>
+        </div>
+      </div> <!--Jumbotron end -->
           
        <table id="location" class="table table-striped">
         <tr>

@@ -19,7 +19,15 @@
       <!-- Latest compiled and miniAfied JavaScript -->
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
       
+      
       <link rel="stylesheet" type="text\css">
+      <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
+      
+      <style>
+        h1 {
+            font-family: 'Baloo Bhaina', cursive;
+        }
+      </style>
     </head>
     
   <body>
@@ -38,56 +46,17 @@
       </nav>
       
       <div class="container">
-      <div class="jumbotron">
-        <h1 class="display-3">App</h1>
-        <p class="lead">Data rap app example jumbotron</p>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
+      <div style="background: rgba(60, 255, 60, 0.2);" class="jumbotron">
+        <h1>Meal Manager</h1>
+        <p class="lead">A simple recipe app that provides ingerdiants fast.</p>
       </div>
-      
-     <div class="container">
-    <div class="row clearfix">
-		<div class="col-md-12 column">
-			<table class="table table-condenced" id="tab_logic">
-				<thead>
-					<tr >
-						<th class="text-center">
-							#
-						</th>
-						<th class="text-center">
-							
-						</th>
-						<th class="text-center">
-							Mail
-						</th>
-						<th class="text-center">
-							Mobile
-						</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr id='addr0'>
-						<td>
-						1
-						</td>
-						<td>
-						<input type="text" name='name0'  placeholder='Name' class="form-control"/>
-						</td>
-						<td>
-						<input type="text" name='mail0' placeholder='Mail' class="form-control"/>
-						</td>
-						<td>
-						<input type="text" name='mobile0' placeholder='Mobile' class="form-control"/>
-						</td>
-					</tr>
-                    <tr id='addr1'></tr>
-				</tbody>
-			</table>
-		</div>
-	</div>
-	<a id="add_row" class="btn btn-default pull-left">Add Row</a><a id='delete_row' class="pull-right btn btn-default">Delete Row</a>
-</div>
-</div>
-</div>
+          
+       <table id="location" class="table table-striped">
+        <tr>
+            <th>Step</th>
+            <th><span class="glyphicon glyphicon-cutlery"></span>  Ingredients</th>
+        </tr>
+       </table>
 
       
 

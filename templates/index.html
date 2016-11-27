@@ -28,6 +28,9 @@
         h1 {
             font-family: 'Baloo Bhaina', cursive;
         }
+        h4 {
+            font-family: 'Baloo Bhaina', cursive;
+        }
           
       </style>
     </head>
@@ -50,15 +53,12 @@
       <div class="container">
       <div style="background: rgba(60, 255, 60, 0.2);" class="jumbotron">
         <h1>Meal Manager</h1>
-        <p class="lead">A simple recipe app that provides ingerdiants fast.</p>
+        <p class="lead">Enter a meal you would like to search for!.</p>
           <div class="input-group">
             <input type="text" value="chicken" id="sbar" class="form-control" aria-label="...">
                 <div class="input-group-btn">
                     <button type="button" class="btn btn-default" id="button" title="Search Database">
                         <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                    </button>
-                    <button type="button" class="btn btn-default btn" title="Sort by reviews" >
-                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                     </button>
                     <button type="button" class="btn btn-default btn" title="Sort by trending" >
                         <span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span>
@@ -67,15 +67,21 @@
         </div>
           <table id="location" class="table table-striped">
         <tr>
+            <th>Meal</th>
             <th>Step</th>
             <th><span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>  Ingredients</th>
+            
         </tr>
        </table>
       
           
        
           
-   <div class="media" >
+  
+      
+</div>  <!--Jumbotron end -->
+      
+ <div class="media" >
   <div class="media-left" id="imgStore"> <!-- media 1 -->
     
   </div>
@@ -119,10 +125,6 @@
     
   </div>
 </div>
-      
-</div>  <!--Jumbotron end -->
-      
-
     </div> <!-- /container -->
   </body>
  

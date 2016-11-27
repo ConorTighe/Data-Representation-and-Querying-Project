@@ -13,10 +13,11 @@ function getIngredients(key) {
     success: function(data) { result = JSON.parse(JSON.stringify(data.recipe));
                             console.dir(result);
                             var cnt = 0;
+                             
                             $('#location').append(
                                 $.map(result.ingredients, function (ignore, index) {
                                     cnt = cnt +1;
-        return '<tr><td>' + cnt + '</td><td>' + result.ingredients[index] + '</td>' + '<td><button type="submit" class="btn btn-default btn-sm delete"><span class="glyphicon glyphicon-trash"></span></button></td></tr>';
+                             return '<tr><td>' + result.title + '</td><td>' + cnt + '</td><td>' + result.ingredients[index] + '</td>' + '<td><button type="submit" class="btn btn-default btn-sm delete"><span class="glyphicon glyphicon-trash"></span></button></td></tr>';
                                    
                             }).join()
 );},
@@ -42,15 +43,15 @@ function callback(response, rCnt) {
     console.log(info);
     
         $(pict).html('<a href="#"><img class="img-circle" onclick="getIngredients(' + response[rCnt].recipe_id + ')" width="300" height="300" src="'+ response[rCnt].image_url +'" ></a>"');
-        $(info).html('<h4 class="media-heading">' + response[rCnt].title + '</h4>');
+        $(info).html('<h4 class="media-heading">' + response[rCnt].title + '</h4><h3><span class="glyphicon glyphicon-star" aria-hidden="true">    </span>  ' + response[rCnt].social_rank + '</h3><h3><span class="glyphicon glyphicon-print" aria-hidden="true">    </span>   ' + response[rCnt].publisher + '</h3><h3><span class="glyphicon glyphicon-home" aria-hidden="true">    </span>  <a> ' + response[rCnt].source_url + '</a></h3><button type="button" class="btn btn-default" id="button" title="Save"><span class="glyphicon glyphicon-save" aria-hidden="true"></span></button>');
         $(pict2).html('<a href="#"><img class="img-circle" onclick="getIngredients(' + response[rCnt+1].recipe_id + ')" width="300" height="300" src="'+ response[rCnt+1].image_url +'" ></a>"');
-        $(info2).html('<h4 class="media-heading">' + response[rCnt+1].title + '</h4>');
+        $(info2).html('<h4 class="media-heading">' + response[rCnt].title + '</h4><h3><span class="glyphicon glyphicon-star" aria-hidden="true">    </span>  ' + response[rCnt].social_rank + '</h3><h3><span class="glyphicon glyphicon-print" aria-hidden="true">    </span>   ' + response[rCnt].publisher + '</h3><h3><span class="glyphicon glyphicon-home" aria-hidden="true">    </span> <a>  ' + response[rCnt].source_url + '</a></h3><button type="button" class="btn btn-default" id="button" title="Save"><span class="glyphicon glyphicon-save" aria-hidden="true"></span></button>');
         $(pict3).html('<a href="#"><img class="img-circle" onclick="getIngredients(' + response[rCnt+2].recipe_id + ')" width="300" height="300" src="'+ response[rCnt+2].image_url +'" ></a>"');
-        $(info3).html('<h4 class="media-heading">' + response[rCnt+2].title + '</h4>');
+        $(info3).html('<h4 class="media-heading">' + response[rCnt].title + '</h4><h3><span class="glyphicon glyphicon-star" aria-hidden="true">    </span>  ' + response[rCnt].social_rank + '</h3><h3><span class="glyphicon glyphicon-print" aria-hidden="true">    </span>   ' + response[rCnt].publisher + '</h3><h3><span class="glyphicon glyphicon-home" aria-hidden="true">    </span> <a>  ' + response[rCnt].source_url + '</a></h3><button type="button" class="btn btn-default" id="button" title="Save"><span class="glyphicon glyphicon-save" aria-hidden="true"></span></button>');
         $(pict4).html('<a href="#"><img class="img-circle" onclick="getIngredients(' + response[rCnt+3].recipe_id + ')" width="300" height="300" src="'+ response[rCnt+3].image_url +'" ></a>"');
-        $(info4).html('<h4 class="media-heading">' + response[rCnt+3].title + '</h4>');
+        $(info4).html('<h4 class="media-heading">' + response[rCnt].title + '</h4><h3><span class="glyphicon glyphicon-star" aria-hidden="true">    </span>  ' + response[rCnt].social_rank + '</h3><h3><span class="glyphicon glyphicon-print" aria-hidden="true">    </span>   ' + response[rCnt].publisher + '</h3><h3><span class="glyphicon glyphicon-home" aria-hidden="true">    </span> <a>  ' + response[rCnt].source_url + '</a></h3><button type="button" class="btn btn-default" id="button" title="Save"><span class="glyphicon glyphicon-save" aria-hidden="true"></span></button>');
         $(pict5).html('<a href="#"><img class="img-circle" onclick="getIngredients(' + response[rCnt+4].recipe_id + ')" width="300" height="300" src="'+ response[rCnt+4].image_url +'" ></a>"');
-        $(info5).html('<h4 class="media-heading">' + response[rCnt+4].title + '</h4>');
+        $(info5).html('<h4 class="media-heading">' + response[rCnt].title + '</h4><h3><span class="glyphicon glyphicon-star" aria-hidden="true">    </span>  ' + response[rCnt].social_rank + '</h3><h3><span class="glyphicon glyphicon-print" aria-hidden="true">    </span>   ' + response[rCnt].publisher + '</h3><h3><span class="glyphicon glyphicon-home" aria-hidden="true">    </span> <a>  ' + response[rCnt].source_url + '</a></h3><button type="button" class="btn btn-default" id="button" title="Save"><span class="glyphicon glyphicon-save" aria-hidden="true"></span></button>');
     
     
     console.log(pict);
@@ -68,11 +69,8 @@ $(document).ready(function(){
     dataType: 'json',
     success: function(data) { search = JSON.parse(JSON.stringify(data.recipes));
                              i = 0;
+                             console.dir(search);
                              callback(search, i);
-                             callback(search, i+1);
-                             callback(search, i+2);
-                             callback(search, i+3);
-                             callback(search, i+4);
                              
                              
                            },

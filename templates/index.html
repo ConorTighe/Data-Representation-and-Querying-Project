@@ -23,6 +23,7 @@
       
       <link rel="stylesheet" type="text\css">
       <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
       
       <style>
         h1 {
@@ -31,20 +32,26 @@
         h4 {
             font-family: 'Baloo Bhaina', cursive;
         }
+        h2 {
+            font-family: 'Cabin Sketch', cursive;
+            text-align: center;
+            font-size: 300%;
+        }
+         
           
       </style>
     </head>
     
   <body>
 
-     <nav class="navbar navbar-default">
+      <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">Data Rep</a>
             </div>
         <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="SaveFile.html">My Recipes</a></li>
             <li><a href="#">Settings</a></li> 
         </ul>
         </div>
@@ -65,14 +72,7 @@
                     </button>
                 </div>
         </div>
-          <table id="location" class="table table-striped">
-        <tr>
-            <th>Meal</th>
-            <th>Step</th>
-            <th><span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>  Ingredients</th>
-            
-        </tr>
-       </table>
+          
       
           
        
@@ -80,6 +80,18 @@
   
       
 </div>  <!--Jumbotron end -->
+          
+          <div style="background: url('/static/img/jumbobg.jpg');" class="jumbotron">
+              <h2>Ingredients List</h2>
+          <table id="location" class="table table-striped">
+        <tr>
+            <th>Meal</th>
+            <th>Step</th>
+            <th><span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span></th>
+            
+        </tr>
+       </table>
+          </div>
       
  <div class="media" >
   <div class="media-left" id="imgStore"> <!-- media 1 -->

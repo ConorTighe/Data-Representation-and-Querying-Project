@@ -28,6 +28,21 @@ function getIngredients(key) {
 });
 }
 
+function saveRecipe(title,rank,auth,src) {
+    $.ajax({
+        type: "POST",
+        headers: {"Content-Type": "application/json"},
+        url: "/SaveFile",
+        data: JSON.stringify({name: title, rating : rank, author : auth, source: src}),
+        success: function(response) {
+            console.log(response);
+        },
+        error: function(response, error) {
+            console.log(response);
+            console.log(error);
+        }
+    });
+}
 
 function callback(response, rCnt) {
     var pict = document.getElementById("imgStore");
@@ -42,21 +57,27 @@ function callback(response, rCnt) {
     var info5 = document.getElementById("details5");
     
     console.log(info);
-    
+        
+ // testing save: saveRecipe(response[rCnt].title, response[rCnt].social_rank.toFixed(2), response[rCnt].publisher, response[rCnt].source_url);
+        // Media Component 1
         $(pict).html('<a href="#"><img class="img-circle" onclick="getIngredients(' + response[rCnt].recipe_id + ')" width="300" height="300" src="'+ response[rCnt].image_url +'" ></a>"');
-        $(info).html('<h4 class="media-heading">' + response[rCnt].title + '</h4><h3><span class="glyphicon glyphicon-star" aria-hidden="true">    </span>  ' + response[rCnt].social_rank.toFixed(2) + '</h3><h3><span class="glyphicon glyphicon-print" aria-hidden="true">    </span>   ' + response[rCnt].publisher + '</h3><h3><span class="glyphicon glyphicon-home" aria-hidden="true">    </span>  <a> ' + response[rCnt].source_url + '</a></h3><button type="button" class="btn btn-default" id="button" title="Save"><span class="glyphicon glyphicon-save" aria-hidden="true"></span></button>');
+        $(info).html('<h4 class="media-heading">' + response[rCnt].title + '</h4><h3><span class="glyphicon glyphicon-star" aria-hidden="true">    </span>  ' + response[rCnt].social_rank.toFixed(2) + '</h3><h3><span class="glyphicon glyphicon-print" aria-hidden="true">    </span>   ' + response[rCnt].publisher + '</h3><h3><span class="glyphicon glyphicon-home" aria-hidden="true">    </span>  <a> ' + response[rCnt].source_url + '</a></h3><button type="button" class="btn btn-default" id="button1"  title="Save"><span class="glyphicon glyphicon-save" aria-hidden="true"></span></button>');
     
+        // Media Component 2
         $(pict2).html('<a href="#"><img class="img-circle" onclick="getIngredients(' + response[rCnt+1].recipe_id + ')" width="300" height="300" src="'+ response[rCnt+1].image_url +'" ></a>"');
-        $(info2).html('<h4 class="media-heading">' + response[rCnt+1].title + '</h4><h3><span class="glyphicon glyphicon-star" aria-hidden="true">    </span>  ' + response[rCnt+1].social_rank.toFixed(2) + '</h3><h3><span class="glyphicon glyphicon-print" aria-hidden="true">    </span>   ' + response[rCnt+1].publisher + '</h3><h3><span class="glyphicon glyphicon-home" aria-hidden="true">    </span> <a>  ' + response[rCnt].source_url + '</a></h3><button type="button" class="btn btn-default" id="button" title="Save"><span class="glyphicon glyphicon-save" aria-hidden="true"></span></button>');
+        $(info2).html('<h4 class="media-heading">' + response[rCnt+1].title + '</h4><h3><span class="glyphicon glyphicon-star" aria-hidden="true">    </span>  ' + response[rCnt+1].social_rank.toFixed(2) + '</h3><h3><span class="glyphicon glyphicon-print" aria-hidden="true">    </span>   ' + response[rCnt+1].publisher + '</h3><h3><span class="glyphicon glyphicon-home" aria-hidden="true">    </span> <a>  ' + response[rCnt].source_url + '</a></h3><button type="button"  class="btn btn-default" id="button2" title="Save"><span class="glyphicon glyphicon-save" aria-hidden="true"></span></button>');
     
+        // Media Component 3
         $(pict3).html('<a href="#"><img class="img-circle" onclick="getIngredients(' + response[rCnt+2].recipe_id + ')" width="300" height="300" src="'+ response[rCnt+2].image_url +'" ></a>"');
-        $(info3).html('<h4 class="media-heading">' + response[rCnt+2].title + '</h4><h3><span class="glyphicon glyphicon-star" aria-hidden="true">    </span>  ' + response[rCnt+2].social_rank.toFixed(2) + '</h3><h3><span class="glyphicon glyphicon-print" aria-hidden="true">    </span>   ' + response[rCnt+2].publisher + '</h3><h3><span class="glyphicon glyphicon-home" aria-hidden="true">    </span> <a>  ' + response[rCnt].source_url + '</a></h3><button type="button" class="btn btn-default" id="button" title="Save"><span class="glyphicon glyphicon-save" aria-hidden="true"></span></button>');
+        $(info3).html('<h4 class="media-heading">' + response[rCnt+2].title + '</h4><h3><span class="glyphicon glyphicon-star" aria-hidden="true">    </span>  ' + response[rCnt+2].social_rank.toFixed(2) + '</h3><h3><span class="glyphicon glyphicon-print" aria-hidden="true">    </span>   ' + response[rCnt+2].publisher + '</h3><h3><span class="glyphicon glyphicon-home" aria-hidden="true">    </span> <a>  ' + response[rCnt].source_url + '</a></h3><button type="button" class="btn btn-default" id="button3" title="Save"><span class="glyphicon glyphicon-save" aria-hidden="true"></span></button>');
     
+        // Media Component 4
         $(pict4).html('<a href="#"><img class="img-circle" onclick="getIngredients(' + response[rCnt+3].recipe_id + ')" width="300" height="300" src="'+ response[rCnt+3].image_url +'" ></a>"');
-        $(info4).html('<h4 class="media-heading">' + response[rCnt+3].title + '</h4><h3><span class="glyphicon glyphicon-star" aria-hidden="true">    </span>  ' + response[rCnt+3].social_rank.toFixed(2) + '</h3><h3><span class="glyphicon glyphicon-print" aria-hidden="true">    </span>   ' + response[rCnt+3].publisher + '</h3><h3><span class="glyphicon glyphicon-home" aria-hidden="true">    </span> <a>  ' + response[rCnt].source_url + '</a></h3><button type="button" class="btn btn-default" id="button" title="Save"><span class="glyphicon glyphicon-save" aria-hidden="true"></span></button>');
+        $(info4).html('<h4 class="media-heading">' + response[rCnt+3].title + '</h4><h3><span class="glyphicon glyphicon-star" aria-hidden="true">    </span>  ' + response[rCnt+3].social_rank.toFixed(2) + '</h3><h3><span class="glyphicon glyphicon-print" aria-hidden="true">    </span>   ' + response[rCnt+3].publisher + '</h3><h3><span class="glyphicon glyphicon-home" aria-hidden="true">    </span> <a>  ' + response[rCnt].source_url + '</a></h3><button type="button" class="btn btn-default" id="button4" title="Save"><span class="glyphicon glyphicon-save" aria-hidden="true"></span></button>');
     
+        // Media Component 5
         $(pict5).html('<a href="#"><img class="img-circle" onclick="getIngredients(' + response[rCnt+4].recipe_id + ')" width="300" height="300" src="'+ response[rCnt+4].image_url +'" ></a>"');
-        $(info5).html('<h4 class="media-heading">' + response[rCnt+4].title + '</h4><h3><span class="glyphicon glyphicon-star" aria-hidden="true">    </span>  ' + response[rCnt+4].social_rank.toFixed(2) + '</h3><h3><span class="glyphicon glyphicon-print" aria-hidden="true">    </span>   ' + response[rCnt+4].publisher + '</h3><h3><span class="glyphicon glyphicon-home" aria-hidden="true">    </span> <a>  ' + response[rCnt].source_url + '</a></h3><button type="button" class="btn btn-default" id="button" title="Save"><span class="glyphicon glyphicon-save" aria-hidden="true"></span></button>');
+        $(info5).html('<h4 class="media-heading">' + response[rCnt+4].title + '</h4><h3><span class="glyphicon glyphicon-star" aria-hidden="true">    </span>  ' + response[rCnt+4].social_rank.toFixed(2) + '</h3><h3><span class="glyphicon glyphicon-print" aria-hidden="true">    </span>   ' + response[rCnt+4].publisher + '</h3><h3><span class="glyphicon glyphicon-home" aria-hidden="true">    </span> <a>  ' + response[rCnt].source_url + '</a></h3><button type="button" class="btn btn-default" id="button5" title="Save"><span class="glyphicon glyphicon-save" aria-hidden="true"></span></button>');
     
     
     console.log(pict);
@@ -86,7 +107,8 @@ $(document).ready(function(){
 });
     });
     
-    
+  
+ 
      
        $('#location').on('click','.delete',function(){
                                             $(this).parents('tr').remove();

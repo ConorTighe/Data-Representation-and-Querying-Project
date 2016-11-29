@@ -3,8 +3,8 @@
 This repository contains a single web application called Meal Manager that I will be submitting as my project.
 
 ## Project Overview:
-The aim of my project is to create a hub where a user can find a recipe, view the ingrediants and save the recipe locally.
+The aim of my project is to create a hub where a user can find a recipe, view the ingrediants and save the recipe locally. The web application uses an online API to search a wide selection of meal blogs and review sites, It then uses a local database to store the recipes for the user.
 
-The API I will be using is:
-![alt text](https://s3.amazonaws.com/mashape-production-logos/apis/53aa5b2be4b0f2c975470ff1_medium "food")
-
+ ###The API I will be using is:
+ 
+[![Food2Fork](static/img/preview.jpg)](https://www.youtube.com/watch?v=_inPpj-qiM0)

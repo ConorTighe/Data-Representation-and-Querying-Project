@@ -19,5 +19,11 @@ Open the directory and run SPA.py to start the application, then go to http://12
 Enter a food or meal you wish to search for then click the search button. Once the app has loaded the recipes from the API click the picture to list the ingredients required to make this meal, if for what ever reason you cant use a certain ingredient as you cant obtain it or have an allergy use the delete button to remove it from the list. Details on the recipe such as site rating and author will appear beside the image, below these there are two options, I link to the website that provided the recipe and a button to save the recipe locally on you machine.
 
 
+#### References:
+
+[sqlite and flask](https://www.tutorialspoint.com/flask/flask_sqlite.htm)
+
+
+[Thenewboston Flask tutorial](https://www.youtube.com/watch?v=ZVGwqnjOKjk)
 
 

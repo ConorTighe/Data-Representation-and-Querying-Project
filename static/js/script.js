@@ -37,15 +37,14 @@ function saveRecipe(title,rank,auth,src) {
         $.ajax({
             type: "POST",
             headers: {"Content-Type": "application/json"},
-            url: "http://127.0.0.1:5000/SaveFile",
+            url: "/SaveFile",
             data: JSON.stringify({name: title, rating : rank, author : auth, source: src}),
             success: function(response) {
-            console.log("Hii");
+            console.log("Recipe Saved");
             console.log(response);
             },
             error: function(response, error) {
-            console.log(response);
-            console.log(error);
+            console.dir(error);
             }
         });
     }

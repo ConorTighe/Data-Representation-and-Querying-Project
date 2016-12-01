@@ -27,3 +27,4 @@ Enter a food or meal you wish to search for then click the search button. Once t
 [Thenewboston Flask tutorial](https://www.youtube.com/watch?v=ZVGwqnjOKjk)
 
 
+[Mashape Docs](http://docs.mashape.com/javascript)

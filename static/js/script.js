@@ -64,11 +64,15 @@ function callback(response, rCnt) {
     var info5 = document.getElementById("details5");
     
     // These vars are created to bypass the syntax error I emailed showed you in class, it lets Javascript distinguish between the "" and the '' when injecting the HTML 
-    var onclickstring = "saveRecipe('" + response[rCnt].title + "','" + response[rCnt].social_rank.toFixed(2) + "','" + response[rCnt].publisher + "','" + response[rCnt].source_url + "')";
-     var onclickstring1 = "saveRecipe('" + response[rCnt].title + "','" + response[rCnt].social_rank.toFixed(2) + "','" + response[rCnt].publisher + "','" + response[rCnt].source_url + "')";
-     var onclickstring2 = "saveRecipe('" + response[rCnt].title + "','" + response[rCnt].social_rank.toFixed(2) + "','" + response[rCnt].publisher + "','" + response[rCnt].source_url + "')";
-     var onclickstring3 = "saveRecipe('" + response[rCnt].title + "','" + response[rCnt].social_rank.toFixed(2) + "','" + response[rCnt].publisher + "','" + response[rCnt].source_url + "')";
-     var onclickstring4 = "saveRecipe('" + response[rCnt].title + "','" + response[rCnt].social_rank.toFixed(2) + "','" + response[rCnt].publisher + "','" + response[rCnt].source_url + "')";
+     var onclickstring = "saveRecipe('" + response[rCnt].title + "','" + response[rCnt].social_rank.toFixed(2) + "','" + response[rCnt].publisher + "','" + response[rCnt].source_url + "')";
+    
+     var onclickstring1 = "saveRecipe('" + response[rCnt+1].title + "','" + response[rCnt+1].social_rank.toFixed(2) + "','" + response[rCnt+1].publisher + "','" + response[rCnt+1].source_url + "')";
+    
+     var onclickstring2 = "saveRecipe('" + response[rCnt+2].title + "','" + response[rCnt+2].social_rank.toFixed(2) + "','" + response[rCnt+2].publisher + "','" + response[rCnt+2].source_url + "')";
+    
+     var onclickstring3 = "saveRecipe('" + response[rCnt+3].title + "','" + response[rCnt+3].social_rank.toFixed(2) + "','" + response[rCnt+3].publisher + "','" + response[rCnt+3].source_url + "')";
+    
+     var onclickstring4 = "saveRecipe('" + response[rCnt+4].title + "','" + response[rCnt+4].social_rank.toFixed(2) + "','" + response[rCnt+4].publisher + "','" + response[rCnt+4].source_url + "')";
     
     //console.log(info);
     
@@ -86,17 +90,17 @@ function callback(response, rCnt) {
         // Media Component 3
         $(pict3).html('<a href="#"><img class="img-circle" onclick="getIngredients(' + response[rCnt+2].recipe_id + ')" width="300" height="300" src="'+ response[rCnt+2].image_url +'" ></a>"');
     
-        $(info3).html('<h4 class="media-heading">' + response[rCnt+2].title + '</h4><h3><span class="glyphicon glyphicon-star" aria-hidden="true">    </span>  ' + response[rCnt+2].social_rank.toFixed(2) + '</h3><h3><span class="glyphicon glyphicon-print" aria-hidden="true">    </span>   ' + response[rCnt+2].publisher + '</h3><h3><span class="glyphicon glyphicon-home" aria-hidden="true">    </span> <a href="' + response[rCnt+2].source_url + '">  ' + response[rCnt+2].publisher + ' Link  </a></h3><button onclick="' + onclickstring + '" type="button" class="btn btn-default" id="button3" title="Save"><span class="glyphicon glyphicon-save" aria-hidden="true"></span></button>');
+        $(info3).html('<h4 class="media-heading">' + response[rCnt+2].title + '</h4><h3><span class="glyphicon glyphicon-star" aria-hidden="true">    </span>  ' + response[rCnt+2].social_rank.toFixed(2) + '</h3><h3><span class="glyphicon glyphicon-print" aria-hidden="true">    </span>   ' + response[rCnt+2].publisher + '</h3><h3><span class="glyphicon glyphicon-home" aria-hidden="true">    </span> <a href="' + response[rCnt+2].source_url + '">  ' + response[rCnt+2].publisher + ' Link  </a></h3><button onclick="' + onclickstring3 + '" type="button" class="btn btn-default" id="button3" onclick="' + onclickstring2 + '" title="Save"><span class="glyphicon glyphicon-save" aria-hidden="true"></span></button>');
     
         // Media Component 4
         $(pict4).html('<a href="#"><img class="img-circle" onclick="getIngredients(' + response[rCnt+3].recipe_id + ')" width="300" height="300" src="'+ response[rCnt+3].image_url +'" ></a>"');
     
-        $(info4).html('<h4 class="media-heading">' + response[rCnt+3].title + '</h4><h3><span class="glyphicon glyphicon-star" aria-hidden="true">    </span>  ' + response[rCnt+3].social_rank.toFixed(2) + '</h3><h3><span class="glyphicon glyphicon-print" aria-hidden="true">    </span>   ' + response[rCnt+3].publisher + '</h3><h3><span class="glyphicon glyphicon-home" aria-hidden="true">    </span> <a href="' + response[rCnt+3].source_url + '">  ' + response[rCnt+3].publisher + ' Link  </a></h3><button onclick="' + onclickstring + '" type="button" class="btn btn-default" id="button4" title="Save"><span class="glyphicon glyphicon-save" aria-hidden="true"></span></button>');
+        $(info4).html('<h4 class="media-heading">' + response[rCnt+3].title + '</h4><h3><span class="glyphicon glyphicon-star" aria-hidden="true">    </span>  ' + response[rCnt+3].social_rank.toFixed(2) + '</h3><h3><span class="glyphicon glyphicon-print" aria-hidden="true">    </span>   ' + response[rCnt+3].publisher + '</h3><h3><span class="glyphicon glyphicon-home" aria-hidden="true">    </span> <a href="' + response[rCnt+3].source_url + '">  ' + response[rCnt+3].publisher + ' Link  </a></h3><button onclick="' + onclickstring3 + '" type="button" class="btn btn-default" id="button4" title="Save"><span class="glyphicon glyphicon-save" aria-hidden="true"></span></button>');
     
         // Media Component 5
         $(pict5).html('<a href="#"><img class="img-circle" onclick="getIngredients(' + response[rCnt+4].recipe_id + ')" width="300" height="300" src="'+ response[rCnt+4].image_url +'" ></a>"');
     
-        $(info5).html('<h4 class="media-heading">' + response[rCnt+4].title + '</h4><h3><span class="glyphicon glyphicon-star" aria-hidden="true">    </span>  ' + response[rCnt+4].social_rank.toFixed(2) + '</h3><h3><span class="glyphicon glyphicon-print" aria-hidden="true">    </span>   ' + response[rCnt+4].publisher + '</h3><h3><span class="glyphicon glyphicon-home" aria-hidden="true">    </span> <a href="' + response[rCnt+4].source_url + '">  ' + response[rCnt+4].publisher + ' Link  </a></h3><button type="button"  onclick="' + onclickstring + '" class="btn btn-default" id="button5" title="Save"><span class="glyphicon glyphicon-save" aria-hidden="true"></span></button>');
+        $(info5).html('<h4 class="media-heading">' + response[rCnt+4].title + '</h4><h3><span class="glyphicon glyphicon-star" aria-hidden="true">    </span>  ' + response[rCnt+4].social_rank.toFixed(2) + '</h3><h3><span class="glyphicon glyphicon-print" aria-hidden="true">    </span>   ' + response[rCnt+4].publisher + '</h3><h3><span class="glyphicon glyphicon-home" aria-hidden="true">    </span> <a href="' + response[rCnt+4].source_url + '">  ' + response[rCnt+4].publisher + ' Link  </a></h3><button type="button"  onclick="' + onclickstring4 + '" class="btn btn-default" id="button5" title="Save"><span class="glyphicon glyphicon-save" aria-hidden="true"></span></button>');
     
     
    // console.log(pict);

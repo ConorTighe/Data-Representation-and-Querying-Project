@@ -5,7 +5,7 @@ import requests
 from requests import Request
 import json
 
-DATABASE = 'data/data.db'
+DATABASE = "data/data.db"
 
 app = Flask(__name__)
 
@@ -14,7 +14,7 @@ cur = db.cursor()
 
 cur.execute("CREATE TABLE IF NOT EXISTS myrecipes(id INTEGER PRIMARY KEY, name TEXT, rating TEXT, author TEXT, source TEXT)")
 
-# dummy data to test if database is working
+# dummy data to test if database show local db is working
 # cur.execute('INSERT INTO myrecipes(name,rating,author,source) VALUES("test","test","test","test")')
 
 db.commit()

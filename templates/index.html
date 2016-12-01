@@ -1,12 +1,15 @@
+<!-- Conor Tighe - G00314417 -->
 <!DOCTYPE html>
 <html lang="en">
   <head >
-   
+      <!-- App title -->
+    <title>Meal Manager</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
+      <!-- jQuery used -->
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
     <script src="/static/js/script.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js" ></script>
@@ -20,12 +23,14 @@
       <!-- Latest compiled and miniAfied JavaScript -->
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js" ></script>
       
-      
+      <!-- Links to fonts and tab image-->
       <link rel="stylesheet" type="text\css">
       <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+      <link rel="shortcut icon" type="image/x-icon" href="/static/img/food2f.png" />
       
+      <!-- Applying fonts to CSS-->
       <style>
         h1 {
             font-family: 'Pacifico', cursive;
@@ -46,27 +51,31 @@
       </style>
     </head>
     
-  <body background="/static/kitchen.jpg">
+    <!-- My background link -->
+  <body background="/static/img/kitchen.jpg">
 
+      <!-- Bootstrap navbar -->
       <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#"></a>
             </div>
+            <!-- page navigation and page your on -->
         <ul class="nav navbar-nav">
             <li class="active"><a href="http://127.0.0.1:5000">Home</a></li>
-            <li><a href="List">My Recipe</a></li>
+            <li><a href="http://127.0.0.1:5000/List">My Recipe</a></li>
             <li><a href="https://github.com/ConorTighe1995/Data-Representation-and-Querying-Project/blob/master/README.md">Github</a></li> 
         </ul>
         </div>
       </nav>
       
+      <!-- Bootstrap Jumbotron where the search and sort functions are located -->
       <div class="container">
       <div style="background: rgba(60, 255, 60, 0.5);" class="jumbotron">
           <h1>Meal Manager</h1>
         <p class="lead">Explore a database of recipes!</p>
           <div class="input-group">
-            <input type="text" value="chicken" id="sbar" class="form-control" aria-label="...">
+            <input type="text" value="Enter meal or food here" id="sbar" class="form-control" aria-label="...">
                 <div class="input-group-btn">
                     <button type="button" class="btn btn-default" id="button" title="Search Database">
                         <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
@@ -79,76 +88,69 @@
                     </button>
                 </div>
         </div>
+    </div>  <!--Jumbotron end -->
           
-      
-          
-       
-          
-  
-      
-</div>  <!--Jumbotron end -->
-          
-          <div style="background: url('/static/img/jumbobg.jpg');" class="jumbotron">
-              <h2>Ingredients List</h2>
+    <!--Table where I will inject ingredients into -->
+    <div style="background: url('/static/img/jumbobg.jpg');" class="jumbotron">
+        <h2>Ingredients List</h2>
           <table id="location" class="table table-striped">
         <tr>
             <th>Meal</th>
             <th>Step</th>
-            <th><span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span></th>
-            
+            <th><span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span></th>  
         </tr>
-       </table>
-          </div>
+          </table>
+    </div>
       
-           <div class="container">
-      <div style="background: rgba(60, 255, 60, 0.5);" class="jumbotron">
-          
- <div class="media" >
-  <div class="media-left" id="imgStore"> <!-- media 1 -->
-    
-  </div>
-  <div class="media-body" id="details">
-    
-  </div>
-</div>
+    <!-- Jumbotron that will expand as we add recipes -->
+    <div class="container">
+        <div style="background: rgba(60, 255, 60, 0.5);" class="jumbotron">
+    <div class="media" >
+        <div class="media-left" id="imgStore"> <!-- media 1 -->
+            <!-- Search image injected here -->
+        </div>
+        <div class="media-body" id="details">
+            <!-- Search details injected here -->
+        </div>
+    </div>
           
     <div class="media" >
-  <div class="media-left" id="imgStore2"> <!-- media 2 -->
-    
-  </div>
-  <div class="media-body" id="details2">
-    
-  </div>
-</div>
-          
-          <div class="media" >
-  <div class="media-left" id="imgStore3"> <!-- media 3 -->
-    
-  </div>
-  <div class="media-body" id="details3">
-    
-  </div>
-</div>
+        <div class="media-left" id="imgStore2"> <!-- media 2 -->
+        <!-- Search image injected here -->
+        </div>
+    <div class="media-body" id="details2">
+        <!-- Search details injected here -->
+        </div>
+    </div>
           
     <div class="media" >
-  <div class="media-left" id="imgStore4"> <!-- media 4 -->
-    
-  </div>
-  <div class="media-body" id="details4">
-    
-  </div>
-</div>
+        <div class="media-left" id="imgStore3"> <!-- media 3 -->
+             <!-- Search image injected here -->
+     </div>
+        <div class="media-body" id="details3">
+             <!-- Search details injected here -->
+        </div>
+    </div>
+          
+    <div class="media" >
+        <div class="media-left" id="imgStore4"> <!-- media 4 -->
+            <!-- Search image injected here -->
+        </div>
+        <div class="media-body" id="details4">
+            <!-- Search details injected here -->
+        </div>
+    </div>
           
    <div class="media" >
-  <div class="media-left" id="imgStore5"> <!-- media 5 -->
+        <div class="media-left" id="imgStore5"> <!-- media 5 -->
     
-  </div>
-  <div class="media-body" id="details5">
+        </div>
+        <div class="media-body" id="details5">
     
-  </div>
-</div>
+        </div>
+   </div>
 
-       <!-- 
+       <!-- Page nav button to implement
           <div class="input-group-btn">
                     <button type="button" class="btn btn-default" id="backbtn" title="Search Database">
                         <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
@@ -157,8 +159,8 @@
                         <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
                     </button>
           </div> -->
-    </div> <!-- /container -->
-          </div>
+            </div> <!-- /container -->
+        </div>
       </div>
   </body>
  

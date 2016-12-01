@@ -44,7 +44,7 @@ def list():
     cur.execute("select * from myrecipes")
 
     rows = cur.fetchall();
-    return render_template("LoadFile.html", rows=rows)
+    return render_template("SaveFile.html", rows=rows)
 
 
 

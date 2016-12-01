@@ -26,7 +26,41 @@
     
   </head>
   <body>
+      
+       <!-- Bootstrap navbar -->
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#"></a>
+            </div>
+            <!-- page navigation and page your on -->
+        <ul class="nav navbar-nav">
+            <li><a href="http://127.0.0.1:5000">Home</a></li>
+            <li class="active"><a href="http://127.0.0.1:5000/List">My Recipe</a></li>
+            <li><a href="https://github.com/ConorTighe1995/Data-Representation-and-Querying-Project/blob/master/README.md">Github</a></li> 
+        </ul>
+        </div>
+      </nav>
    
+      <!-- GET saved data
+      <table border = 1>
+         <thead>
+            <td>Name</td>
+             <td>Rating></td>
+            <td>Author</td>
+            <td>Site</td>
+         </thead>
+         
+         {% for row in rows %}
+            <tr>
+               <td>{{row["name"]}}</td>
+               <td>{{row["rating"]}}</td>
+               <td> {{ row["author]}}</td>
+               <td>{{row["source"]}}</td>	
+            </tr>
+         {% endfor %}
+      </table>
+      
     <script src="js/bootstrap.min.js"></script>
   </body>
 </html>

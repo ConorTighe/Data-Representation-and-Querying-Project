@@ -24,12 +24,16 @@
       <link rel="stylesheet" type="text\css">
       <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
       
       <style>
         h1 {
-            font-family: 'Baloo Bhaina', cursive;
+            font-family: 'Pacifico', cursive;
         }
         h4 {
+            font-family: 'Baloo Bhaina', cursive;
+        }
+        p {
             font-family: 'Baloo Bhaina', cursive;
         }
         h2 {
@@ -42,33 +46,36 @@
       </style>
     </head>
     
-  <body>
+  <body background="/static/kitchen.jpg">
 
       <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">Data Rep</a>
+                <a class="navbar-brand" href="#"></a>
             </div>
         <ul class="nav navbar-nav">
             <li class="active"><a href="http://127.0.0.1:5000">Home</a></li>
-            <li><a href="SaveFile">My Recipes</a></li>
-            <li><a href="https://github.com/ConorTighe1995/Data-Representation-and-Querying-Project/blob/master/README.md">About Meal Manager</a></li> 
+            <li><a href="List">My Recipe</a></li>
+            <li><a href="https://github.com/ConorTighe1995/Data-Representation-and-Querying-Project/blob/master/README.md">Github</a></li> 
         </ul>
         </div>
       </nav>
       
       <div class="container">
-      <div style="background: rgba(60, 255, 60, 0.2);" class="jumbotron">
-        <h1>Meal Manager</h1>
-        <p class="lead">Enter a meal you would like to search for!.</p>
+      <div style="background: rgba(60, 255, 60, 0.5);" class="jumbotron">
+          <h1>Meal Manager</h1>
+        <p class="lead">Explore a database of recipes!</p>
           <div class="input-group">
             <input type="text" value="chicken" id="sbar" class="form-control" aria-label="...">
                 <div class="input-group-btn">
                     <button type="button" class="btn btn-default" id="button" title="Search Database">
                         <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                     </button>
-                    <button type="button" class="btn btn-default btn" title="Sort by trending" >
+                    <button type="button" class="btn btn-default btn" id="trend" title="Sort by trending" >
                         <span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-default btn" id="rate" title="Sort by rating" >
+                        <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
                     </button>
                 </div>
         </div>
@@ -93,6 +100,9 @@
        </table>
           </div>
       
+           <div class="container">
+      <div style="background: rgba(60, 255, 60, 0.5);" class="jumbotron">
+          
  <div class="media" >
   <div class="media-left" id="imgStore"> <!-- media 1 -->
     
@@ -137,7 +147,19 @@
     
   </div>
 </div>
+
+       <!-- 
+          <div class="input-group-btn">
+                    <button type="button" class="btn btn-default" id="backbtn" title="Search Database">
+                        <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-default" id="forwardbtn" title="Search Database">
+                        <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+                    </button>
+          </div> -->
     </div> <!-- /container -->
+          </div>
+      </div>
   </body>
  
 </html>

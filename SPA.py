@@ -14,7 +14,8 @@ db = sqlite3.connect(DATABASE)
 # Set up cursor to navigate database
 cur = db.cursor()
 #Create table
-cur.execute("CREATE TABLE IF NOT EXISTS myrecipes(id INTEGER PRIMARY KEY, name TEXT, rating TEXT, author TEXT)")
+cur.execute(
+    "CREATE TABLE IF NOT EXISTS myrecipes(id INTEGER PRIMARY KEY, name TEXT, rating TEXT, author TEXT, source TEXT)")
 
 # dummy data to test if database show local db is working
 # cur.execute('INSERT INTO myrecipes(name,rating,author,source) VALUES("test","test","test","test")')
@@ -36,7 +37,8 @@ def SaveFile():
             # Extract the data from the AJAX
             data = request.get_json()
             # Put the data into the table
-            cur.execute('INSERT INTO myrecipes(name,rating,author) VALUES(?,?,?,?)', data['name','rating','author'])
+            cur.execute(
+                "CREATE TABLE IF NOT EXISTS myrecipes(id INTEGER PRIMARY KEY, name TEXT, rating TEXT, author TEXT, source TEXT)")
             # Save changes to database
             db.commit()
             #Let the user know it worked
@@ -52,7 +54,7 @@ def list():
     # List everything of the user
     cur.execute("select * from myrecipes")
     # get the rows
-    rows = cur.fetchall();
+    rows = cur.fetchall()
     # apply rows to html
     return render_template("SaveFile.html", rows=rows)
 
